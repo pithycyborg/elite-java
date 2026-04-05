@@ -1,55 +1,37 @@
-# Elite Java
+# PithyCyborg
 
-**Low-memory JVM experiments. Graal Native. HotSpot intrinsics.**
+**High-signal code. Zero-dependency systems. Careful engineering.**
 
-Java code that challenges the "enterprise bloat" stereotype. Each experiment maximizes performance and minimizes footprint using JVM tuning, off-heap memory, and native compilation.
+PithyCyborg is a collection of focused engineering experiments. No hype, no bloat—just sharp implementations across the stack.
 
-## Featured
+## The Manifesto
 
-| Experiment | Footprint | Key Technique |
-|------------|-----------|---------------|
-| **No-GC Parser** | 4.2MB | Off-heap `ByteBuffer` → AST |
-| **Native CLI** | 8MB | GraalVM Native Image, reflection-free |
-| **SIMD Math** | 6.1MB | `VectorAPI` + intrinsic inlining |
-| **Zero-Alloc Streams** | 5.8MB | `Spliterator` + primitive collections |
+* **Logic over Layers:** Minimal abstraction. If the logic isn't visible, it's a liability.
+* **Standard Lib First:** Dependencies are technical debt. We prefer the standard library.
+* **Mechanical Sympathy:** Code written with respect for the hardware it runs on.
 
-## Characteristics
+## Featured Repositories
 
-- **Graal Native:** Sub-10MB standalone executables when possible
-- **Footprint-first:** Heap usage ≤ 32MB target
-- **HotSpot tuned:** `-XX:` flags + tiered compilation
-- **No Spring:** Core Java 21+ only unless architecturally required
-- **Benchmarked:** Inline JMH results vs Rust/C
+| Project | Stack | Core Concept |
+| :--- | :--- | :--- |
+| **[elite-rust](https://github.com/pithycyborg/elite-rust)** | Rust | Zero-alloc systems, Lock-free data structures, SIMD. |
+| **[elite-java](https://github.com/pithycyborg/elite-java)** | Java | GraalVM Native Image, Project Loom, Cache-locality. |
+| **[elite-python](https://github.com/pithycyborg/elite-python)** | Python | Zero-dependency CHIP-8, pure-stdlib CLI architecture. |
+| **[elite-prompts](https://github.com/pithycyborg/elite-prompts)** | LLM | Deterministic prompt frameworks for production RAG. |
 
-## Philosophy
+---
 
-Java's strength is **mature optimization**. These experiments show how to:
+## Technical Insights
 
-Graal Native sub-10MB executables  
-Zero-allocation parsing pipelines  
-Vectorized math without JNI  
-CLI tools that startup in 12ms
+I distill systems engineering and AI workflows into a high-signal newsletter. No fluff, just the implementation details.
 
-## Usage
+👉 **[PithyCyborg.com](https://PithyCyborg.com)**
 
-```bash
-# Standard JVM
-./gradlew run
+---
 
-# Native (GraalVM)
-./gradlew nativeCompile
-./build/native/nativeCompile/experiment-name
-```
+## Connection
 
-## Benchmarks
+* **Systems & AI:** [@pithycyborg](https://x.com/pithycyborg)
+* **Personal:** [@mrcomputersci](https://x.com/mrcomputersci)
 
-| Experiment | Input Size | Java | Rust | Python |
-|------------|------------|------|------|--------|
-| JSON Parser | 1MB | 3.2ms | 2.1ms | 187ms |
-| CLI Startup | - | 12ms | 89μs | 245ms |
-
-**Newsletter** for Java deep-dives + weekly prompts: [PithyCyborg.com](https://PithyCyborg.com)
-
-**X:** [@mrcomputersci](https://x.com/mrcomputersci) | [@pithycyborg](https://x.com/pithycyborg)
-
-MIT License
+`MIT License`

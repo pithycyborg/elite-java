@@ -26,7 +26,7 @@ All while staying ridiculously lightweight and self contained.
 
 ### Quick Start
 
-Requires **Java 21+** — no build tools, no dependencies.
+Requires **Java 21+** | no build tools, no dependencies.
 
 ```bash
 java EliteSniffer.java capture.pcap
